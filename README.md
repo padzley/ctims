@@ -1,59 +1,151 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📡 CTIMS — Cell Tower Information Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**CTIMS** ialah sistem pengurusan maklumat menara telekomunikasi yang dibangunkan untuk membantu pencatat data menara, measurement, audit keselamatan dan laporan PDF secara teratur dan mudah digunakan.
 
-## About Laravel
+> *CTIMS masih dalam fasa awal pembangunan (public, tanpa auth dahulu). Sistem akan ditambah login & roles pada versi akan datang.* :contentReference[oaicite:0]{index=0}
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🧭 Table of Contents
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- [📌 Project Overview](#-project-overview)  
+- [🚀 Roadmap / Development Phases](#-roadmap--development-phases)  
+- [🔧 Tech Stack](#-tech-stack)  
+- [📦 Installation & Setup](#-installation--setup)  
+- [▶️ Usage](#️-usage)  
+- [✨ Features](#-features)  
+- [🤝 Contributing](#-contributing)  
+- [📄 License](#-license)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 📌 Project Overview
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+CTIMS direka untuk memudahkan **input & pengurusan data menara**, **audit keselamatan**, serta menghasilkan **laporan PDF** untuk tujuan dokumentasi dan rujukan. Projek ini dibangunkan menggunakan Laravel & teknologi web moden.
 
-## Laravel Sponsors
+README ini memberikan gambaran projek dan panduan awal untuk install, guna dan sumbang! :contentReference[oaicite:1]{index=1}
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🚀 Roadmap / Development Phases
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 🔹 **Fasa 1 — Core System (Tanpa Login)**
+Status: ✔ *In progress / Public*
 
-## Contributing
+Fungsi utama yang sedang dibangunkan dan tersedia secara umum:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+✔ Tower CRUD  
+✔ Measurements  
+✔ Safety Audit  
+✔ Image Uploads  
+✔ PDF Report
 
-## Code of Conduct
+📝 Fokus fasa ini adalah stabilkan core system & aliran kerja utama dulu. :contentReference[oaicite:2]{index=2}
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+### 🔹 **Fasa 2 — Authentication (Kemudian)**  
+Status: 🔜 *Planned*
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Selepas sistem stabil, akan ditambah:
 
-## License
+- 🔑 Login  
+- 🔓 Logout  
+- 👥 Roles & Permissions  
+  - **Admin** → semua akses  
+  - **Inspector** → input + view sahaja  
+- Authorization & access control middleware  
+- Security improvements
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Ini bertujuan pastikan keselamatan & kawalan akses lebih baik.
+
+---
+
+## 🔧 Tech Stack
+
+- **Backend:** Laravel (PHP)  
+- **Database:** MySQL / MariaDB  
+- **Frontend:** Blade + Tailwind / Vite (config)  
+- **Tools:** VS Code, Git & GitHub  
+- **Testing:** Laravel Test Suite
+
+---
+
+## 📦 Installation & Setup
+
+1. **Clone repo:**
+   ```bash
+   git clone https://github.com/padzley/ctims.git
+   cd ctims
+   
+2 Install dependencies:
+    composer install
+    npm install
+    npm run dev
+
+3. Configure environment:
+    cp .env.example .env
+
+4. Generate app key:
+    php artisan key:generate
+
+5. Run migrations:
+   php artisan migrate
+
+6. Serve app:
+   php artisan serve
+---
+
+▶️ Usage
+
+Selepas install & serve:
+
+👉 Buka dalam browser:
+http://localhost:8000
+
+Sistem tanpa login dahulu — semua fungsi core boleh dicuba & digunakan secara terbuka.
+
+✨ Features
+✔ Included (Fasa 1)
+
+📍 Tower CRUD
+
+📊 Measurements
+
+🛡 Safety Audit
+
+🖼 Image upload + preview
+
+📄 Automated PDF report generation
+
+🔒 Planned (Fasa 2)
+
+Login & Logout
+
+Role based access (Admin / Inspector)
+
+Authorization middleware
+
+✨ Roadmap boleh dikemaskini bila fungsi baru masuk!
+
+🤝 Contributing
+
+Terbuka untuk sesiapa yang nak bantu develop:
+
+Fork repo ini
+
+Buat branch baru (feat/my-feature)
+
+Commit & push
+
+Buat Pull Request
+
+Sila keep code clean, ikut format Laravel standard, dan tulis commit yang jelas. 
+GitHub
+
+📄 License
+
+MIT License © 2026
+(Masukkan pautan LICENSE bila dah ada)
+
+
