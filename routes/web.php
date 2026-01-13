@@ -13,6 +13,10 @@ Route::get('/', function () {
 |--------------------------------------------------------------------------
 */
 
-Route::get('/towers', [TowerController::class, 'index'])->name('towers.index');
+/* Route::get('/towers', [TowerController::class, 'index'])->name('towers.index');
 Route::get('/towers/create', [TowerController::class, 'create'])->name('towers.create');
 Route::post('/towers', [TowerController::class, 'store'])->name('towers.store');
+ */
+// use App\Http\Controllers\TowerController;
+
+Route::resource('towers', TowerController::class);
